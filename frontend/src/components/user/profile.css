@@ -1,0 +1,117 @@
+
+
+
+body {
+  background-color: #0d1117;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.underline-nav {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #30363d;
+  background-color: #161b22;
+}
+
+.underline-nav-item {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.underline-nav-item:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+#logout {
+  padding: 0.6rem 1.2rem;
+  background-color: #238636;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logout:hover {
+  background-color: #2ea043;
+}
+
+.profile-page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: space-around;
+}
+
+.user-profile-section {
+  background-color: #161b22;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 300px;
+  flex: 1;
+  text-align: center;
+  box-shadow: 0 0 10px #0d1117;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.name h3 {
+  margin: 0.5rem 0;
+}
+
+.follow-btn {
+  background-color: #238636;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-btn:hover {
+  background-color: #2ea043;
+}
+
+.follower {
+  display: flex;
+  justify-content: space-around;
+  color: #c9d1d9;
+}
+
+.heat-map-section {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 2;
+  min-width: 300px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #logout {
+    position: static;
+    margin: 2rem auto;
+    display: block;
+  }
+}
