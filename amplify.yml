@@ -5,17 +5,14 @@ applications:
       phases:
         preBuild:
           commands:
-            - nvm install 20
-            - nvm use 20
             - npm ci
         build:
           commands:
             - npm run build
-    artifacts:
-      baseDirectory: build
-      files:
-        - '**/*'
-    cache:
-      paths:
-        - node_modules/**/*
-        - .npm/**/*
+      artifacts:
+        baseDirectory: dist   # Change to 'build' if you’re using create-react-app
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
