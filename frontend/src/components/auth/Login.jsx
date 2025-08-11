@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { useAuth } from '../../authContext'
 
@@ -10,17 +10,11 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
 const navigate = useNavigate();
-  const { setCurrentUser } = useAuth();
-
-  useEffect(() => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userId");
-    setCurrentUser(null);
-  }, [setCurrentUser]);
-
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+   const { setCurrentUser } = useAuth();
   
 
   const handleLogin = async (e) => {
